@@ -1,0 +1,1 @@
+Legacy dashboard components were retired. The active frontend is `minimal-library.tsx` and the app entry point is `src/app/page.tsx`. Data persistence remains in `src/hooks/use-library.ts` and `src/lib/library-repository.ts`.
