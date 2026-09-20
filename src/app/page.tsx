@@ -1,5 +1,6 @@
-import { MinimalLibrary } from "@/components/minimal-library";
+import { Bookshelf } from "@/components/bookshelf";
+import "./bookshelf.css";
 
 export default function Home() {
-  return <MinimalLibrary />;
+  return <Bookshelf />;
 }
