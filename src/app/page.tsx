@@ -1,5 +1,5 @@
-import { LibraryApp } from "@/components/library-app";
+import { MinimalLibrary } from "@/components/minimal-library";
 
 export default function Home() {
-  return <LibraryApp />;
+  return <MinimalLibrary />;
 }
