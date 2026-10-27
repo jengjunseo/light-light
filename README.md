@@ -54,7 +54,7 @@ npx supabase db push
 
 ## OpenRouter
 
-`/api/synopsis` Route Handler가 서버에서 OpenRouter를 호출합니다. URL 자료는 공개 HTTP/HTTPS 문서만 허용하며, 내부 네트워크 주소·인증 정보가 포함된 URL·텍스트가 아닌 응답을 거부합니다. API 키가 없거나 외부 페이지 추출이 실패해도 앱은 중단되지 않고 편집 가능한 오류 메시지를 보여줍니다.
+`/api/synopsis` Route Handler가 서버에서 OpenRouter를 호출합니다. URL 자료는 최초 URL에 대해 HTTP/HTTPS, 인증 정보와 일부 내부 네트워크 주소를 검사하며 텍스트가 아닌 응답을 거부합니다. 현재 자동 리다이렉트의 대상과 DNS 조회 후 연결 주소를 다시 검증하지 않으므로 내부 네트워크 접근을 완전히 차단한다고 보장할 수 없습니다. API 키가 없거나 외부 페이지 추출이 실패해도 앱은 중단되지 않고 편집 가능한 오류 메시지를 보여줍니다.
 
 ## 검증
 
@@ -73,3 +73,8 @@ npx vercel deploy
 ```
 
 Production promotion 또는 Production Branch 변경은 이 프로젝트 범위에 포함되지 않습니다.
+
+## 보안 개선 과제
+
+- [ ] URL fetch의 각 리다이렉트 대상과 실제 연결 주소를 검증하고 DNS 재결정 및 내부 주소 우회를 테스트한다.
+- [ ] 공개 배포 전 접근 제어와 Supabase anon 권한·RLS 정책을 검증한다.
