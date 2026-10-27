@@ -20,11 +20,10 @@ Node.js 20 이상과 npm을 사용합니다.
 
 ```bash
 npm install
-cp .env.example .env.local
 npm run dev
 ```
 
-`http://localhost:3000`에서 앱을 엽니다. Supabase 변수가 비어 있으면 브라우저 `localStorage`에 데모 데이터와 변경사항을 저장합니다. 이 모드는 UI와 기능 검증을 위한 fallback이며, 브라우저별로 데이터가 분리됩니다.
+`http://localhost:3000`에서 앱을 엽니다. 저장소에 `.env.example`이 없으므로 필요한 경우 아래 변수로 `.env.local`을 직접 만듭니다. Supabase 변수가 비어 있으면 브라우저 `localStorage`에 데모 데이터와 변경사항을 저장합니다. 이 모드는 UI와 기능 검증을 위한 fallback이며, 브라우저별로 데이터가 분리됩니다.
 
 ## 환경 변수
 
